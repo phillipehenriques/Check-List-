@@ -6,39 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
-    <title>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</title>
+    <title>Checklist</title>
 </head>
 <body>
     <nav>
-        <a href="#">CLIQUE</a>
-        <a href="#">CLIQUE</a>
-        <a href="#">CLIQUE</a>
-        <a href="#">CLIQUE</a> 
+        CHECKLIST
     </nav>
     <main>
         <section>
             <h3>Check List</h3>
              <div class="card">
-                <input type="text" name="" id="add">
-                <button class="buttonAdd">Adicionar</button>
+                <input type="text" name="" id="add" placeholder="Digite um item">
+                <button class="buttonAdd" id="clicar">Adicionar</button>
              </div>
-             <div class="card2">
-
+             <div class="card2" id="cardJs">
                 <!-- checkbox -->
-                <div class="item">
-                    <div class="checkbox-circle">
+                <div class="item" id="row">
+                    <div class="checkbox-circle" onclick="esvaecer()">
                       <input type="checkbox" id="checkbox-circle1" name="check">
-                      <label for="checkbox-circle1">copo d'água</label>
+                      <label for="checkbox-circle1" id="itemList">copo d'água</label>
                     </div>
                 </div>
                 <!-- checkbox -->
-
-                <div class="buttonX">X</div>
+                <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
              </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; Phillipe Csorgo Henriques</p>
-    </footer>
+    <script src="JavaScript/script.js"></script>
 </body>
 </html>
