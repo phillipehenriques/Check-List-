@@ -24,12 +24,7 @@ function apagar() {
     document.getElementById("cardJs").style.display = "none";
   }
 
-// MUDANDO TRANSPARÊNCIA
 
-function esvaecer() {
-    document.getElementById("itemList").style.opacity = "0.3";
-    
-  }
 
 // CRIANDO LINHA
 
@@ -37,3 +32,30 @@ valorBotao.onclick = function() {
     // card.appendChild('div')
     // const novaLinha = document.createElement('row')
 }
+
+// -------------------- MUDANDO TRANSPARÊNCIA
+
+function esvaecer() {
+  // var item = document.getElementById('itemList')
+  //   if(this.checked) {
+  //     item.style.opacity = 0.2
+  //   } else {
+  //     item.style.opacity = 1
+  //   }
+    document.getElementById("itemList").style.opacity = "0.3"; 
+    document.getElementById
+  }
+
+
+
+// --------------- OUTRO EXEMPLO
+
+// document.getElementById('checkB').addEventListener('click', function esvaecer() {
+//   var d = document.getElementById('itemList');
+//   if(this.checked) {
+//       window.alert('ola')
+//       d.style.opacity = 0.2;
+//   } else {
+//       d.style.opacity = 1;
+//   }
+// });
