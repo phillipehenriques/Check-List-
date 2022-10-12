@@ -18,44 +18,38 @@ valorBotao.addEventListener('click', () => {
     document.createElement('cardJS')
 })
 
-// EXCLUINDO LINHA
+// -------------------- EXCLUINDO LINHA ( OK )
 
 function apagar() {
     document.getElementById("cardJs").style.display = "none";
   }
 
+// -------------------- CRIANDO LINHA ( FUNCIONANDO )
 
+function addRow() {
+    function teste() {
+        window.alert('deu certo')
+      }
 
-// CRIANDO LINHA
+    //const nova = createElement('linha')
+    document.getElementById('clicar').addEventListener('click', teste)
 
-valorBotao.onclick = function() {
-    // card.appendChild('div')
-    // const novaLinha = document.createElement('row')
+    //document.getElementsByTagName('section')[0].appendChild(div)
 }
 
-// -------------------- MUDANDO TRANSPARÊNCIA
+// -------------------- SELECIONANDO UMA LINHA ( OK )
 
-function esvaecer() {
-  // var item = document.getElementById('itemList')
-  //   if(this.checked) {
-  //     item.style.opacity = 0.2
-  //   } else {
-  //     item.style.opacity = 1
-  //   }
-    document.getElementById("itemList").style.opacity = "0.3"; 
-    document.getElementById
+function selecionar() {
+  var item = document.getElementById('itemList')
+  var sel = document.getElementById('checkbox-circle1')
+
+
+    if(sel.checked == true) {     
+      item.style.color = 'white'
+      document.getElementById('cardJs').style.backgroundColor = 'orange'
+    } else {
+      item.style.color = 'black'
+      document.getElementById('cardJs').style.backgroundColor = 'white'
+    }
+    
   }
-
-
-
-// --------------- OUTRO EXEMPLO
-
-// document.getElementById('checkB').addEventListener('click', function esvaecer() {
-//   var d = document.getElementById('itemList');
-//   if(this.checked) {
-//       window.alert('ola')
-//       d.style.opacity = 0.2;
-//   } else {
-//       d.style.opacity = 1;
-//   }
-// });

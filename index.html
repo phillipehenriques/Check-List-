@@ -15,21 +15,54 @@
     <main>
         <section>
             <h3>Check List</h3>
-             <div class="card">
-                <input type="text" name="" id="add" placeholder="Digite um item">
-                <button class="buttonAdd" id="clicar">Adicionar</button>
-             </div>
+            <div class="card">
+            <input type="text" name="" id="add" placeholder="Digite um item">
+            <button class="buttonAdd" id="clicar" onclick="addRow()">Adicionar</button>
+            </div>
+
+            <!-- LINHA  -->
+
+            <div class="card2" id="cardJs">
+            <!-- checkbox -->
+            <div class="item" id="row">
+                <div id="checkB" class="checkbox-circle"  >
+                    <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
+                    <label for="checkbox-circle1" id="itemList">Macarrão</label>
+                </div>
+            </div>
+            <!-- checkbox -->
+            <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
+            </div>
+
+            <!-- LINHA  -->
+
              <div class="card2" id="cardJs">
                 <!-- checkbox -->
                 <div class="item" id="row">
-                    <div id="checkB" class="checkbox-circle" onclick="esvaecer()" >
-                      <input type="checkbox" id="checkbox-circle1" name="check">
-                      <label for="checkbox-circle1" id="itemList">copo d'água</label>
+                    <div id="checkB" class="checkbox-circle"  >
+                        <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
+                        <label for="checkbox-circle1" id="itemList">Molho de tomate</label>
                     </div>
                 </div>
                 <!-- checkbox -->
                 <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
-             </div>
+                </div>
+    
+            <!-- LINHA  -->
+
+                <div class="card2" id="cardJs">
+                <!-- checkbox -->
+                <div class="item" id="row">
+                    <div id="checkB" class="checkbox-circle"  >
+                        <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
+                        <label for="checkbox-circle1" id="itemList">Almondêgas</label>
+                    </div>
+                </div>
+                <!-- checkbox -->
+                <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
+                </div>
+        
+        <!-- LINHA  -->
         </section>
     </main>
     <script src="JavaScript/script.js"></script>
