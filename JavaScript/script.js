@@ -45,7 +45,7 @@ function createRow() {
   //     <!-- checkbox -->
   //     <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
   // </div>
-  
+
   var comp1 = document.createElement('div');
   
   var primeiro = document.getElementById('cardJs')
@@ -71,6 +71,7 @@ function createRow() {
   // comp1.appendChild(item)
 
   // comp1.appendChild(newElement)
+  
 
   return comp1
 }
