@@ -8,7 +8,7 @@ const card = document.getElementById('card')
 
 let listaCompleta = []
 
-// BOTAO 
+// BOTAO
 
 const valorBotao = document.getElementById('clicar');
 
@@ -33,7 +33,8 @@ function addRow() {
 }
 
 function createRow() {
-  // <div class="card2" id="cardJs"> <- Wrapper
+
+  // <div class="card2" id="cardJs"> <- comp1
   //     <!-- checkbox -->
   //     <div class="item" id="row">
   //         <div id="checkB" class="checkbox-circle">
@@ -44,13 +45,34 @@ function createRow() {
   //     <!-- checkbox -->
   //     <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
   // </div>
-  var wrapper = document.createElement('div');
-  wrapper.className = "card2"
-  wrapper.id = "card_" + Math.floor(Math.random() * 90000) + 10000;
+  
+  var comp1 = document.createElement('div');
+  
+  var primeiro = document.getElementById('cardJs')
+  var segundo = document.getElementById('row')
+  var terceiro = document.getElementById('checkB')
+  var quarto = document.getElementById('checkbox-circle1')
+  var quinto = document.getElementById('itemList')
 
-  // wrapper.appendChild(newElement)
+  primeiro.className = "card2"
+  primeiro.id = "pri_" + Math.floor(Math.random() * 90000) + 10000;
+  primeiro.appendChild(segundo)
 
-  return wrapper
+  segundo.className = "item"
+  segundo.id = "seg_" + Math.floor(Math.random() * 90000) + 10000;
+  segundo.appendChild(terceiro)
+
+  terceiro.className = "checkbox-circle"
+  terceiro.id = "ter_" + Math.floor(Math.random() * 90000) + 10000;
+  terceiro.appendChild(quarto, quinto)
+
+  // comp1.className = "item"
+  // comp1.id = "item_" + Math.floor(Math.random() * 90000) + 10000;
+  // comp1.appendChild(item)
+
+  // comp1.appendChild(newElement)
+
+  return comp1
 }
 
 // -------------------- SELECIONANDO UMA LINHA ( OK )
@@ -58,7 +80,7 @@ function createRow() {
 function selecionar() {
   var item = document.getElementById('itemList')
   var sel = document.getElementById('checkbox-circle1')
-   
+
 
     if(sel.checked) {
       item.style.color = 'white'
@@ -67,5 +89,5 @@ function selecionar() {
       item.style.color = 'black'
       document.getElementById('cardJs').style.backgroundColor = 'white'
     }
-    
+
   }
