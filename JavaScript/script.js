@@ -27,14 +27,30 @@ function apagar() {
 // -------------------- CRIANDO LINHA ( FUNCIONANDO )
 
 function addRow() {
-    function teste() {
-        window.alert('deu certo')
-      }
+    var container = document.getElementById('listContainer')
+    var row = createRow();
+    container.appendChild(row);
+}
 
-    //const nova = createElement('linha')
-    document.getElementById('clicar').addEventListener('click', teste)
+function createRow() {
+  // <div class="card2" id="cardJs"> <- Wrapper
+  //     <!-- checkbox -->
+  //     <div class="item" id="row">
+  //         <div id="checkB" class="checkbox-circle">
+  //             <input onclick="selecionar(this)" type="checkbox" id="checkbox-circle1" name="check">
+  //             <label for="checkbox-circle1" id="itemList">Macarrão</label>
+  //         </div>
+  //     </div>
+  //     <!-- checkbox -->
+  //     <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
+  // </div>
+  var wrapper = document.createElement('div');
+  wrapper.className = "card2"
+  wrapper.id = "card_" + Math.floor(Math.random() * 90000) + 10000;
 
-    //document.getElementsByTagName('section')[0].appendChild(div)
+  // wrapper.appendChild(newElement)
+
+  return wrapper
 }
 
 // -------------------- SELECIONANDO UMA LINHA ( OK )
@@ -42,9 +58,9 @@ function addRow() {
 function selecionar() {
   var item = document.getElementById('itemList')
   var sel = document.getElementById('checkbox-circle1')
+   
 
-
-    if(sel.checked == true) {     
+    if(sel.checked) {
       item.style.color = 'white'
       document.getElementById('cardJs').style.backgroundColor = 'orange'
     } else {

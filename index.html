@@ -22,47 +22,21 @@
 
             <!-- LINHA  -->
 
-            <div class="card2" id="cardJs">
-            <!-- checkbox -->
-            <div class="item" id="row">
-                <div id="checkB" class="checkbox-circle"  >
-                    <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
-                    <label for="checkbox-circle1" id="itemList">Macarrão</label>
-                </div>
-            </div>
-            <!-- checkbox -->
-            <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
-            </div>
-
-            <!-- LINHA  -->
-
-             <div class="card2" id="cardJs">
-                <!-- checkbox -->
-                <div class="item" id="row">
-                    <div id="checkB" class="checkbox-circle"  >
-                        <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
-                        <label for="checkbox-circle1" id="itemList">Molho de tomate</label>
-                    </div>
-                </div>
-                <!-- checkbox -->
-                <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
-                </div>
-    
-            <!-- LINHA  -->
-
+            <div id="listContainer">
                 <div class="card2" id="cardJs">
-                <!-- checkbox -->
-                <div class="item" id="row">
-                    <div id="checkB" class="checkbox-circle"  >
-                        <input onclick="selecionar()" type="checkbox" id="checkbox-circle1" name="check">
-                        <label for="checkbox-circle1" id="itemList">Almondêgas</label>
+                    <!-- checkbox -->
+                    <div class="item" id="row">
+                        <div id="checkB" class="checkbox-circle">
+                            <input onclick="selecionar(this)" type="checkbox" id="checkbox-circle1" name="check">
+                            <label for="checkbox-circle1" id="itemList">Macarrão</label>
+                        </div>
                     </div>
+                    <!-- checkbox -->
+                    <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
                 </div>
-                <!-- checkbox -->
-                <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
-                </div>
-        
-        <!-- LINHA  -->
+            </div>
+
+
         </section>
     </main>
     <script src="JavaScript/script.js"></script>
