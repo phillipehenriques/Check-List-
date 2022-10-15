@@ -12,67 +12,66 @@ let listaCompleta = []
 
 const valorBotao = document.getElementById('clicar');
 
-valorBotao.addEventListener('click', () => {
-    // alert('Ítem incluído!')
-    card.appendChild('cardJs')
-    document.createElement('cardJS')
-})
+// -------------------- CRIANDO LINHA ( FUNCIONANDO )
+
+function addRow() {
+  var container = document.getElementById('listContainer')
+  var row = createRow();
+  container.appendChild(row);
+}
 
 // -------------------- EXCLUINDO LINHA ( OK )
 
 function apagar() {
-    document.getElementById("cardJs").style.display = "none";
-  }
-
-// -------------------- CRIANDO LINHA ( FUNCIONANDO )
-
-function addRow() {
-    var container = document.getElementById('listContainer')
-    var row = createRow();
-    container.appendChild(row);
+  var component = document.getElementById('');
+  console.log(component);
+  component.style.display = "none";
 }
 
 function createRow() {
 
   // <div class="card2" id="cardJs"> <- comp1
-  //     <!-- checkbox -->
-  //     <div class="item" id="row">
-  //         <div id="checkB" class="checkbox-circle">
-  //             <input onclick="selecionar(this)" type="checkbox" id="checkbox-circle1" name="check">
-  //             <label for="checkbox-circle1" id="itemList">Macarrão</label>
+  //     <div class="item" id="row"> <- comp2
+  //         <div id="checkB" class="checkbox-circle"> <- comp3
+  //             <input onclick="selecionar(this)" type="checkbox" id="checkbox-circle1" name="check"> <- comp4
+  //             <label for="checkbox-circle1" id="itemList">Macarrão</label> <- comp5
   //         </div>
   //     </div>
-  //     <!-- checkbox -->
-  //     <div class="buttonX" id="buttonX" onclick="apagar()">X</div>
+  //     <div class="buttonX" id="buttonX" onclick="apagar()">X</div> <- comp6
   // </div>
 
   var comp1 = document.createElement('div');
+  comp1.className = "card2";
+  comp1.id = "comp1_" + Math.floor(Math.random() * 90000) + 10000;
+
+  var comp2 = document.createElement('div');
+  comp2.className = "item";
+  comp2.id = "comp2_" + Math.floor(Math.random() * 90000) + 10000;
+
+  var comp3 = document.createElement('div');
+  comp3.className = "checkbox-circle";
+  comp3.id = "comp3_" + Math.floor(Math.random() * 90000) + 10000;
+
+  var comp4 = document.createElement('input');
+  var comp5 = document.createElement('label');
+
+  var comp6 = document.createElement('div');
+  comp6.className = "buttonX";
+  comp6.id = "comp6_" + Math.floor(Math.random() * 90000) + 10000;
+
+  comp6.onclick = function(event) {
+    var component = document.getElementById(event.target.parentElement.id);
+    component.style.display = "none";
+  }
+
+  comp6.innerText = "X";
   
-  var primeiro = document.getElementById('cardJs')
-  var segundo = document.getElementById('row')
-  var terceiro = document.getElementById('checkB')
-  var quarto = document.getElementById('checkbox-circle1')
-  var quinto = document.getElementById('itemList')
-
-  primeiro.className = "card2"
-  primeiro.id = "pri_" + Math.floor(Math.random() * 90000) + 10000;
-  primeiro.appendChild(segundo)
-
-  segundo.className = "item"
-  segundo.id = "seg_" + Math.floor(Math.random() * 90000) + 10000;
-  segundo.appendChild(terceiro)
-
-  terceiro.className = "checkbox-circle"
-  terceiro.id = "ter_" + Math.floor(Math.random() * 90000) + 10000;
-  terceiro.appendChild(quarto, quinto)
-
-  // comp1.className = "item"
-  // comp1.id = "item_" + Math.floor(Math.random() * 90000) + 10000;
-  // comp1.appendChild(item)
-
-  // comp1.appendChild(newElement)
+  comp1.appendChild(comp2);
+  comp1.appendChild(comp6);
+  comp2.appendChild(comp3);
+  comp3.appendChild(comp4);
+  comp3.appendChild(comp5);
   
-
   return comp1
 }
 
