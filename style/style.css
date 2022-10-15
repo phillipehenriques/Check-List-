@@ -26,10 +26,10 @@
     --cor09: ;
     --cor10: #000;
 
-    --font-family: 'Matcha', sans-serif;
-    --font-family: 'Montserrat', sans-serif;
-    --font-family: 'Edu TAS Beginner', sans-serif, cursive;
-    --font-family: 'Hind', sans-serif;
+    --font-Matcha: 'Matcha', sans-serif;
+    --font-Mon: 'Montserrat', sans-serif;
+    --font-Edu: 'Edu TAS Beginner', sans-serif, cursive;
+    --font-Hind: 'Hind', sans-serif;
 }
 
 * {
@@ -58,6 +58,13 @@ body {
     align-items: center;
 }
 
+h3 {
+    font-family: var(--font-Mon);
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
 body > p {
 
 
@@ -83,8 +90,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.11);
+    justify-content: start;
+    background-color: none;
     width: 60%;
     max-width: 1400px;
     min-width: 360px;
@@ -107,8 +114,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.219);
     border-radius: 8px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -134,11 +139,11 @@ nav {
     justify-content: center;
     padding: 5px;
     background-color: var(--cor02);
-    width: 60%;
-    max-width: 1200px;
+    color: white;
+    width: 100%;
+
     min-width: 500px;
-    height: 6vh;
-    font-size: 0.9rem;
+    height: 8vh;
     margin-bottom: 1.5vh;
 }
 
@@ -184,11 +189,11 @@ input {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.055);
+    background-color: var(--cor02);
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.219);
     border-radius: 6px;
     font-size: 0.9rem;
-    width: 500px; 
+    width: 93%; 
     padding: 2.5%;
     gap: 15px;
 }
@@ -199,12 +204,18 @@ input {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.219);
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.219);
     border-radius: 6px;
+    margin-top: 15px;
     font-size: 0.9rem;
-    width: 450px; 
+    width: 1000px; 
     padding: 10px;
-    gap: 15px;
+    gap: 5px;
+}
+
+.card2:hover {
+    scale: 1.03;
+    transition: 0.5s;
 }
 
 #add {

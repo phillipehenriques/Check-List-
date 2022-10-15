@@ -28,6 +28,8 @@ function apagar() {
   component.style.display = "none";
 }
 
+// -------------------- CRIANDO LINHAS ( OK )
+
 function createRow() {
 
   // <div class="card2" id="cardJs"> <- comp1
@@ -53,6 +55,26 @@ function createRow() {
   comp3.id = "comp3_" + Math.floor(Math.random() * 90000) + 10000;
 
   var comp4 = document.createElement('input');
+  comp4.id = "comp4_" + Math.floor(Math.random() * 90000) + 10000;
+  
+  comp4.onclick = function(event) {                               // << tratar iss
+    
+    var qualquerCoisa = document.getElementById(event.target.nextSibling);
+    console.log('ola')
+    
+    var item = document.getElementById('itemList')
+    var sel = document.getElementById('checkbox-circle1')
+
+    if(sel.checked) {
+      item.style.color = 'white'
+      document.getElementById('cardJs').style.backgroundColor = 'orange'
+    } else {
+      item.style.color = 'black'
+      document.getElementById('cardJs').style.backgroundColor = 'white'
+    }
+  }                                                                        // << até aqui
+  
+
   var comp5 = document.createElement('label');
 
   var comp6 = document.createElement('div');
