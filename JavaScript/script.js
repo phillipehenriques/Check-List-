@@ -56,8 +56,12 @@ function createRow() {
 
   var comp4 = document.createElement('input');
   comp4.id = "comp4_" + Math.floor(Math.random() * 90000) + 10000;
+    comp4.type = "checkbox";
+    comp4.name = "check";
+    comp4.value = "value";
+    comp4.id = "checkbox-circle1";
   
-  comp4.onclick = function(event) {                               // << tratar iss
+  comp4.onclick = function(event) {                               // << tratar isso
     
     var qualquerCoisa = document.getElementById(event.target.nextSibling);
     console.log('ola')
@@ -72,10 +76,12 @@ function createRow() {
       item.style.color = 'black'
       document.getElementById('cardJs').style.backgroundColor = 'white'
     }
-  }                                                                        // << até aqui
+  }                                                               // << até aqui
   
 
   var comp5 = document.createElement('label');
+  comp5.id = "comp5_" + Math.floor(Math.random() * 90000) + 10000;
+  comp5.innerText = "Algum item da lista"
 
   var comp6 = document.createElement('div');
   comp6.className = "buttonX";
