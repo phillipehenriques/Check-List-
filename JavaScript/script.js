@@ -15,8 +15,9 @@ const valorBotao = document.getElementById('clicar');
 // -------------------- CRIANDO LINHA ( FUNCIONANDO )
 
 function addRow() {
+  var value = document.getElementById('add').value
   var container = document.getElementById('listContainer')
-  var row = createRow();
+  var row = createRow(value);
   container.appendChild(row);
 }
 
@@ -24,13 +25,12 @@ function addRow() {
 
 function apagar() {
   var component = document.getElementById('');
-  console.log(component);
   component.style.display = "none";
 }
 
 // -------------------- CRIANDO LINHAS ( OK )
 
-function createRow() {
+function createRow(value) {
 
   // <div class="card2" id="cardJs"> <- comp1
   //     <div class="item" id="row"> <- comp2
@@ -56,32 +56,12 @@ function createRow() {
 
   var comp4 = document.createElement('input');
   comp4.id = "comp4_" + Math.floor(Math.random() * 90000) + 10000;
-    comp4.type = "checkbox";
-    comp4.name = "check";
-    comp4.value = "value";
-    comp4.id = "checkbox-circle1";
+  comp4.type = "checkbox";
+  comp4.name = "check";
   
-  comp4.onclick = function(event) {                               // << tratar isso
-    
-    var qualquerCoisa = document.getElementById(event.target.nextSibling);
-    console.log('ola')
-    
-    var item = document.getElementById('itemList')
-    var sel = document.getElementById('checkbox-circle1')
-
-    if(sel.checked) {
-      item.style.color = 'white'
-      document.getElementById('cardJs').style.backgroundColor = 'orange'
-    } else {
-      item.style.color = 'black'
-      document.getElementById('cardJs').style.backgroundColor = 'white'
-    }
-  }                                                               // << até aqui
-  
-
   var comp5 = document.createElement('label');
   comp5.id = "comp5_" + Math.floor(Math.random() * 90000) + 10000;
-  comp5.innerText = "Algum item da lista"
+  comp5.innerText = value
 
   var comp6 = document.createElement('div');
   comp6.className = "buttonX";
@@ -93,6 +73,21 @@ function createRow() {
   }
 
   comp6.innerText = "X";
+
+  comp4.onclick = function(event) {
+    
+    var div = document.getElementById(comp1.id);
+    var checkbox = document.getElementById(event.target.id);
+    var label = document.getElementById(comp5.id);
+
+    if(checkbox.checked) {
+      label.style.color = 'white'
+      document.getElementById(comp1.id).style.backgroundColor = 'orange'
+    } else {
+      label.style.color = 'black'
+      document.getElementById(comp1.id).style.backgroundColor = 'white'
+    }
+  }
   
   comp1.appendChild(comp2);
   comp1.appendChild(comp6);
