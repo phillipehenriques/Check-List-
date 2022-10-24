@@ -16,9 +16,14 @@ const valorBotao = document.getElementById('clicar');
 
 function addRow() {
   var value = document.getElementById('add').value
+
+  var add = document.getElementById('add')                           // zerando o input
+  add.value = ''                                                     // zerando o input
+
   var container = document.getElementById('listContainer')
   var row = createRow(value);
   container.appendChild(row);
+  
 }
 
 // -------------------- EXCLUINDO LINHA ( OK )
@@ -31,6 +36,7 @@ function apagar() {
 // -------------------- CRIANDO LINHAS ( OK )
 
 function createRow(value) {
+
 
   // <div class="card2" id="cardJs"> <- comp1
   //     <div class="item" id="row"> <- comp2
