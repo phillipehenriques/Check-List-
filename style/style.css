@@ -206,6 +206,23 @@ input {
     transition: 0.5s;
 }
 
+.subsection {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:300PX;
+    height: 3vh;
+    gap: 5%;
+}
+
+.progresso {
+    font-size: 18px;
+    color: #fff;
+    font-family: var(--font-Mon);
+}
+
 #add {
     width: 360px;
     height: 20px;
@@ -215,3 +232,16 @@ input {
 #h2card {
     margin-bottom: 5px;
 }
+
+#myProgress {
+    width: 100%;
+    border-radius: 9px;
+    background-color: lightblue;
+  }
+  
+  #myBar {
+    width: 0%;
+    border-radius: 9px;
+    height: 30px;
+    background-color: blue;
+  }

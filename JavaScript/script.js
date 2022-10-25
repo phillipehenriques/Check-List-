@@ -16,14 +16,16 @@ const valorBotao = document.getElementById('clicar');
 
 function addRow() {
   var value = document.getElementById('add').value
+  var add = document.getElementById('add')
 
-  var add = document.getElementById('add')                           // zerando o input
-  add.value = ''                                                     // zerando o input
-
-  var container = document.getElementById('listContainer')
-  var row = createRow(value);
-  container.appendChild(row);
-  
+  if (add.value == '' || add.value) {
+    alert('por favor preencha o campo')
+  } else {
+    var container = document.getElementById('listContainer')
+    var row = createRow(value);
+    container.appendChild(row);
+  }
+  add.value = ''
 }
 
 // -------------------- EXCLUINDO LINHA ( OK )
@@ -64,7 +66,7 @@ function createRow(value) {
   comp4.id = "comp4_" + Math.floor(Math.random() * 90000) + 10000;
   comp4.type = "checkbox";
   comp4.name = "check";
-  
+
   var comp5 = document.createElement('label');
   comp5.id = "comp5_" + Math.floor(Math.random() * 90000) + 10000;
   comp5.innerText = value
@@ -73,20 +75,20 @@ function createRow(value) {
   comp6.className = "buttonX";
   comp6.id = "comp6_" + Math.floor(Math.random() * 90000) + 10000;
 
-  comp6.onclick = function(event) {
+  comp6.onclick = function (event) {
     var component = document.getElementById(event.target.parentElement.id);
     component.style.display = "none";
   }
 
   comp6.innerText = "X";
 
-  comp4.onclick = function(event) {
-    
+  comp4.onclick = function (event) {
+
     var div = document.getElementById(comp1.id);
     var checkbox = document.getElementById(event.target.id);
     var label = document.getElementById(comp5.id);
 
-    if(checkbox.checked) {
+    if (checkbox.checked) {
       label.style.color = 'white'
       document.getElementById(comp1.id).style.backgroundColor = 'orange'
     } else {
@@ -94,13 +96,13 @@ function createRow(value) {
       document.getElementById(comp1.id).style.backgroundColor = 'white'
     }
   }
-  
+
   comp1.appendChild(comp2);
   comp1.appendChild(comp6);
   comp2.appendChild(comp3);
   comp3.appendChild(comp4);
   comp3.appendChild(comp5);
-  
+
   return comp1
 }
 
@@ -111,12 +113,37 @@ function selecionar() {
   var sel = document.getElementById('checkbox-circle1')
 
 
-    if(sel.checked) {
-      item.style.color = 'white'
-      document.getElementById('cardJs').style.backgroundColor = 'orange'
-    } else {
-      item.style.color = 'black'
-      document.getElementById('cardJs').style.backgroundColor = 'white'
-    }
-
+  if (sel.checked) {
+    item.style.color = 'white'
+    document.getElementById('cardJs').style.backgroundColor = 'orange'
+  } else {
+    item.style.color = 'black'
+    document.getElementById('cardJs').style.backgroundColor = 'white'
   }
+
+}
+
+// -------------------------- PROGRESS BAR ( ! ) ------------------------------
+
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
+function progress() {
+  var bar = document.getElementById('myProgress')
+}
