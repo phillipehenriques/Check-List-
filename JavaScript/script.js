@@ -17,9 +17,10 @@ const valorBotao = document.getElementById('clicar');
 function addRow() {
   var value = document.getElementById('add').value
   var add = document.getElementById('add')
+  var linha = document.getElementById('label');
 
-  if (add.value == '' || add.value) {
-    alert('por favor preencha o campo')
+  if (add.value == '' || add.value === linha) {
+    alert('não deixem em branco e não repita o conteúdo!')
   } else {
     var container = document.getElementById('listContainer')
     var row = createRow(value);
