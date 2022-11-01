@@ -107,6 +107,12 @@ function createRow(value) {
   return comp1
 }
 
+//---
+
+function carregarBarra() {
+  var progresso = document.getElementById('myProgress')
+}
+
 // -------------------- SELECIONANDO UMA LINHA ( OK )
 
 function selecionar() {
@@ -147,4 +153,16 @@ function move() {
 
 function progress() {
   var bar = document.getElementById('myProgress')
+}
+
+// ----------------------- pensando
+
+var valor = 100
+var elemento = document.getElementById('comp1')
+function mover() {
+  if (comp1 == ?) {
+    valor / 1
+  }  else {
+
+  }
 }
