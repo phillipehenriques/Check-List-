@@ -20,7 +20,7 @@ function addRow() {
   var linha = document.getElementById('label');
 
   if (add.value == '' || add.value === linha) {
-    alert('não deixem em branco e não repita o conteúdo!')
+    alert('não deixe em branco e não repita o conteúdo!')
   } else {
     var container = document.getElementById('listContainer')
     var row = createRow(value);
@@ -157,12 +157,12 @@ function progress() {
 
 // ----------------------- pensando
 
-var valor = 100
-var elemento = document.getElementById('comp1')
-function mover() {
-  if (comp1 == ?) {
-    valor / 1
-  }  else {
+// var valor = 100
+// var elemento = document.getElementById('comp1')
+// function mover() {
+//   if (comp1 == ?) {
+//     valor / 1
+//   }  else {
 
-  }
-}
+//   }
+// }
