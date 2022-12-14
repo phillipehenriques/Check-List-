@@ -61,8 +61,6 @@ body {
 h3 {
     font-family: var(--font-Mon);
     font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 15px;
 }
 
 body>p {}
